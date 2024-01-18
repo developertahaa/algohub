@@ -1,0 +1,97 @@
+/* Custom animations and styles */
+body {
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Kdam Thmor Pro', sans-serif;
+font-family: 'Roboto Serif', serif;
+}
+/* Custom CSS for animated active link */
+.navbar .menu .active a {
+    transition: all 0.3s ease;
+    color: #594ade; /* Example color - change as needed */
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%); /* Adjust this value based on the total width of your carousel items */
+    }
+    50% {
+        transform: translateX(-50%); /* Adjust this value based on the total width of your carousel items */
+    }
+    100% {
+        transform: translateX(-100%); /* Adjust this value based on the total width of your carousel items */
+    }
+}
+.section {
+    min-height: 100vh; /* Adjust based on your layout */
+}
+
+.carousel-scroll {
+    display: flex;
+    animation: scroll 15s linear infinite; /* Adjust the duration (30s) as needed */
+}
+
+/* Default styles for larger screens */
+.modal-box {
+    max-height: 90vh;
+    max-width: 50rem;
+}
+.stepcard:hover{
+    background-color: rgb(221, 221, 248);
+
+}
+.modal-box img {
+    width: 100%; /* Ensures the image is responsive and fits its container */
+    height: auto; /* Keeps the aspect ratio of the image */
+}
+
+
+/* Styles for mobile screens */
+@media screen and (max-width: 768px) {
+    .modal-box {
+        max-height: 70vh; /* Decreased height */
+        max-width: 90%; /* Decreased and more responsive width */
+    }
+
+    .modal-box img {
+        display: none;
+    }
+    .modal-box h3{
+        font-size: 20px;
+    }
+    .about{
+        padding-left: 15px;
+    }
+    .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .stat {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #how-it-works .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #how-it-works .stepcard {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Add some space between the cards */
+    }
+    .card img{
+        height: 40vh !important;
+    }
+    .grid{
+        font-size:14px;
+        padding: 12px;
+    }
+}
